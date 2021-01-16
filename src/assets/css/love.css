@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("../images/1.jpg");
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/*start top*/
+
+.top {
+    width: 400px;
+    height: 100px;
+    margin: 60px auto;
+    font-size: 30px;
+    font-family: "华文行楷";
+    color: #fff;
+}
+
+.attention {
+    position: absolute;
+    left: 0;
+    top: -50px;
+    width: 800px;
+    height: 100px;
+    margin: 60px auto;
+    font-size: 20px;
+    font-family: "华文行楷";
+    color: red;
+}
+
+
+/*end top*/
+
+
+/*start box*/
+
+.box {
+    width: 310px;
+    height: 310px;
+    margin: auto;
+    perspective: 800px;
+    /*景深*/
+}
+
+.box .pic {
+    position: relative;
+    transform-style: preserve-3d;
+    /*3d环境*/
+    animation: play 10s linear infinite;
+    /*动画名称 执行时间 匀速 无限执行*/
+}
+
+.box ul li {
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/*start box*/
+
+
+/*定义一个关键帧*/
+
+@keyframes play {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+
+/*start text*/
+
+#text {
+    width: 700px;
+    height: 200px;
+    color: #6fade1;
+    text-align: left;
+    /* color: #6495ed; */
+    margin: auto;
+    font-size: 24px;
+    font-family: "方正喵呜体";
+}
+
+.btn-setting {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 20px;
+    top: 30%;
+    text-align: center;
+    line-height: 150px;
+}
+
+.btn {
+    width: 90px;
+    height: 40px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-family: "宋体";
+    font-weight: 500;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    background-image: linear-gradient(to right, #acb6e5, #86fde8);
+    color: #303030;
+    transition: all 0.5s;
+    /* animation: donghua 5s .2s linear alternate infinite; */
+}
+
+.btn-setting:hover>.btn {
+    transform: translateX(30px) rotate(90deg);
+}
+
+@keyframes donghua {
+    0% {
+        top: 40px;
+    }
+    20% {
+        left: 40px;
+    }
+    40% {
+        left: 170px;
+    }
+    60% {
+        left: 370px;
+    }
+    100% {
+        top: 600px;
+    }
+}
+
+
+/*end text*/
